@@ -26,10 +26,10 @@
   height: 100px;
   content: '';
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-  animation: btn-anim-17-anim 2.5s infinite linear;
+  animation: gachaButtonAnim 2.5s infinite linear;
 }
 
-@keyframes btn-anim-17-anim {
+@keyframes gachaButtonAnim {
   0% { left: -100%; }
   20% { left: 200%; }
   100% { left: 200%; }
