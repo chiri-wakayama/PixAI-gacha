@@ -1,16 +1,40 @@
 .gachaButton {
-  display: inline-block;
-  padding: 0.5em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 250px;
+  margin: 0 auto 32px;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  background-color: #2589d0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
   text-decoration: none;
-  background: #668ad8;/*ボタン色*/
-  color: #FFF;
-  border-bottom: solid 4px #627295;
-  border-radius: 3px;
+  overflow: hidden;
 }
-.gachaButton:active {
-  /*ボタンを押したとき*/
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);/*下に動く*/
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
-  border-bottom: none;
+
+.gachaButton::before {
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  transform: rotate(30deg);
+  width: 70px;
+  height: 100px;
+  content: '';
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  animation: btn-anim-17-anim 2.5s infinite linear;
+}
+
+@keyframes btn-anim-17-anim {
+  0% { left: -100%; }
+  20% { left: 200%; }
+  100% { left: 200%; }
+}
+
+.gachaButton:hover {
+  background-color: #1175bc;
 }
